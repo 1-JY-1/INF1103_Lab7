@@ -1,1 +1,1 @@
-GitHub repo: https://github.com/1-JY-1/INF1103_Lab6.git
+GitHub repo: https://github.com/1-JY-1/INF1103_Lab7.git
