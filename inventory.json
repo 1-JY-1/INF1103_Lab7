@@ -2,45 +2,51 @@
     "products": [
         {
             "ID": 1,
+            "type": "physical",
             "name": "Phone",
             "price": 150,
-            "stock": 10
+            "stock": 10,
+            "weight": 0.5
         },
         {
             "ID": 2,
+            "type": "physical",
             "name": "Laptop",
             "price": 1000,
-            "stock": 25
+            "stock": 25,
+            "weight": 2.5
         },
         {
             "ID": 3,
-            "name": "Tablet",
-            "price": 120,
-            "stock": 75
+            "type": "digital",
+            "name": "Software",
+            "price": 1000,
+            "stock": 10,
+            "download_size": 5000
         },
         {
             "ID": 4,
-            "name": "Desktop",
-            "price": 2500.0,
-            "stock": 400
+            "type": "physical",
+            "name": "Dice",
+            "price": 20.0,
+            "stock": 100,
+            "weight": 0.5
         },
         {
             "ID": 5,
-            "name": "Jacket",
-            "price": 1000.0,
-            "stock": 300
+            "type": "physical",
+            "name": "Fan",
+            "price": 20.0,
+            "stock": 100,
+            "weight": 2.0
         },
         {
             "ID": 6,
-            "name": "tt",
-            "price": 123.0,
-            "stock": 133
-        },
-        {
-            "ID": 7,
-            "name": "Dice",
-            "price": 20.0,
-            "stock": 100
+            "type": "physical",
+            "name": "Mic",
+            "price": 100.0,
+            "stock": 10,
+            "weight": 0.1
         }
     ]
 }

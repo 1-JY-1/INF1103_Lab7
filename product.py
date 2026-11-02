@@ -1,21 +1,24 @@
+from abc import ABC, abstractmethod
 
+from canbeshipped import CanBeShipped
 
-class product:
+class product(ABC):
     def __init__(self, id, name, price, stock):
         self.id = id
         self.name = name
         self.price = price
         self.stock = stock
 
-    def displayinfo(self):
-
-        print(
-                f"ID: {self.id} | "
-                f"Product: {self.name} | "
-                f"Price: {self.price:.2f} | "
-                f"Stock: {self.stock}"
-            )
+    @abstractmethod
+    def get_fulfilment_info(self):
         pass
+
+    def display_information(self):
+
+        print(f"ID: {self.id}")
+        print(f"Product: {self.name}")
+        print(f"Price: ${self.price:.2f}")
+        print(f"Stock: {self.stock}")
 
     def updatestock(self):
         try:
@@ -41,3 +44,36 @@ class product:
 
 
         pass
+
+
+class physicalProduct(product, CanBeShipped):
+    def __init__(self, id, type, name, price, stock, weight):
+        super().__init__(id, name, price, stock)
+        self.weight = weight
+        self.type = type
+
+    def calculate_shipping_cost(self):
+        shipping_cost = self.weight * 5
+        return shipping_cost
+
+    def display_information(self):
+        super().display_information()
+        print(f"Weight: {self.weight:.2f} kg")
+        print(f"Shipping Cost: ${self.calculate_shipping_cost():.2f}")
+
+    def get_fulfilment_info(self):
+        print("This product requires delivered physically.")
+
+
+class digitalProduct(product):
+    def __init__(self, id, type, name, price, stock, download_size):
+        super().__init__(id, name, price, stock)
+        self.download_size = download_size
+        self.type = type
+
+    def display_information(self):
+        super().display_information()
+        print(f"Download Size: {self.download_size} MB")
+
+    def get_fulfilment_info(self):
+        print("This product is delivered digitally.") 

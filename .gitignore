@@ -1,0 +1,14 @@
+# Ignore all Python cache folders
+__pycache__/
+
+# Ignore all .pyc files
+*.pyc
+
+# Ignore a specific file
+inventory.json
+
+# Ignore an entire folder
+venv/
+
+# Ignore all log files
+*.log

@@ -19,7 +19,10 @@ class mainprogram:
                 print("No products found.")
             else:
                 for product_obj in self.inventory.products:
-                    product_obj.displayinfo()
+                    print("===========================================================================")
+                    product_obj.display_information()
+                    product_obj.get_fulfilment_info()
+                    print("===========================================================================")
             print("===========================================================================")
 
         elif user_input == 2:
@@ -52,4 +55,5 @@ class mainprogram:
 
         else:
             print("Invalid input. Please enter a number between 1 and 6.")
+
 

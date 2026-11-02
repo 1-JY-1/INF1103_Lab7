@@ -19,12 +19,24 @@ class filehandling:
         data = {"products": []}
 
         for item in inventory:
-            product_data = {
-                "ID": item.id,
-                "name": item.name,
-                "price": item.price,
-                "stock": item.stock
-            }
+            if "weight" in item.__dict__:
+                product_data = {
+                    "ID": item.id,
+                    "type": item.type,
+                    "name": item.name,
+                    "price": item.price,
+                    "stock": item.stock,
+                    "weight": item.weight
+                }
+            elif "download_size" in item.__dict__:
+                product_data = {
+                    "ID": item.id,
+                    "type": item.type,
+                    "name": item.name,
+                    "price": item.price,
+                    "stock": item.stock,
+                    "download_size": item.download_size
+                }
 
             data["products"].append(product_data)
 
