@@ -12,3 +12,6 @@ venv/
 
 # Ignore all log files
 *.log
+
+# Ignore all Json files
+*.json

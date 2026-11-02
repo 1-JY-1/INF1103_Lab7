@@ -147,7 +147,6 @@ class inventory:
                     print(f"Product found: ID: {item.id} | Type: {item.type} | Name: {item.name} | Price: {item.price} | Stock: {item.stock}")
                     print("===================================================================================================================")
                     return
-            print("Product ID not found.")
         except ValueError:
             print("Invalid input. Please enter a valid product ID.")
         pass
